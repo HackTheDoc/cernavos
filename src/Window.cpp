@@ -1,6 +1,7 @@
 #include "include/Window.h"
 #include "include/Application.h"
 
+#include "include/WindowStates/WindowStates.h"
 
 SDL_Renderer* Window::renderer = nullptr;
 SDL_Rect Window::screen = { 0, 0, 1280, 720};
@@ -15,6 +16,9 @@ Window::~Window() {}
 int Window::init() {
     // init SDL
     if (SDL_Init(SDL_INIT_EVERYTHING) != 0)
+        return -1;
+    
+    if (TTF_Init() != 0)
         return -1;
 
     // init window
@@ -39,17 +43,19 @@ int Window::init() {
 
     manager = new Manager();
 
+    openMainMenu();
+
     return 0;
 } 
 
 void Window::update() {
-
+    manager->updateCurrentState();
 } 
 
 void Window::render() {
     SDL_RenderClear(renderer);
 
-
+    manager->renderCurrentState();
 
     SDL_RenderPresent(renderer);
 }  
@@ -77,5 +83,12 @@ void Window::kill() {
     SDL_DestroyWindow(window);
     window = nullptr;
 
+    TTF_Quit();
     SDL_Quit();
 } 
+
+void Window::openMainMenu() {
+    manager->clearWindowStates();
+
+    manager->addAndUseWindowState(WindowState::ID::MAIN, new MainMenu());
+}

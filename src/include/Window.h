@@ -18,7 +18,9 @@ public:
     void update();
     void render();
     void handleEvents();
-    void kill();  
+    void kill(); 
+
+    void openMainMenu();
 
 private:
     SDL_Window* window; // actual window object
