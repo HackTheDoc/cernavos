@@ -1,8 +1,9 @@
 #pragma once
 
 #include <string>
+#include <cstdint>
 
-typedef __uint32_t Uint32;
+typedef uint32_t Uint32;
 
 class Window;
 
