@@ -1,4 +1,4 @@
-# RTS Game
+# Cernavos
 
 Tiny rts game project from scratch.
 
@@ -10,9 +10,10 @@ Tiny rts game project from scratch.
 
 # General Info
 
-This game hasn't been named yet.
-It will be a real time strategy game with very little content.
-It is developped on my twitch (hackthedoc).
+The game is a real time strategy game.
+It features a unique unit creation system and a PvP and PvAI modes.
+
+> Both PvP and PvAI are currently under development.
 
 # Technologies
 
@@ -21,7 +22,7 @@ It is developped on my twitch (hackthedoc).
 
 # Installation
 
-There is currently no public release of the game.
+There is currently no public compiled release of the game.
 
 # Contact
 
