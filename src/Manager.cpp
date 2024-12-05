@@ -31,19 +31,19 @@ TTF_Font* Manager::getFont(const std::string& id){
 }
 
 void Manager::loadFonts() {
-    fonts["h1"] = TTF_OpenFont("./assets/font/Oxanium-Regular.ttf", 160);
-    fonts["h2"] = TTF_OpenFont("./assets/font/Oxanium-Regular.ttf", 120);
-    fonts["h2 bold"] = TTF_OpenFont("./assets/font/Oxanium-Bold.ttf", 120);
-    fonts["h3"] = TTF_OpenFont("./assets/font/Oxanium-Regular.ttf", 76);
-    fonts["h3 bold"] = TTF_OpenFont("./assets/font/Oxanium-Bold.ttf", 76);
-    fonts["h4"] = TTF_OpenFont("./assets/font/Oxanium-Regular.ttf", 64);
-    fonts["h4 bold"] = TTF_OpenFont("./assets/font/Oxanium-Bold.ttf", 64);
+    fonts["h1"]         = TTF_OpenFont("./assets/font/Oxanium-Regular.ttf"  , 160*(Window::fullscreen+1));
+    fonts["h2"]         = TTF_OpenFont("./assets/font/Oxanium-Regular.ttf"  , 120*(Window::fullscreen+1));
+    fonts["h2 bold"]    = TTF_OpenFont("./assets/font/Oxanium-Bold.ttf"     , 120*(Window::fullscreen+1));
+    fonts["h3"]         = TTF_OpenFont("./assets/font/Oxanium-Regular.ttf"  ,  76*(Window::fullscreen+1));
+    fonts["h3 bold"]    = TTF_OpenFont("./assets/font/Oxanium-Bold.ttf"     ,  76*(Window::fullscreen+1));
+    fonts["h4"]         = TTF_OpenFont("./assets/font/Oxanium-Regular.ttf"  ,  64*(Window::fullscreen+1));
+    fonts["h4 bold"]    = TTF_OpenFont("./assets/font/Oxanium-Bold.ttf"     ,  64*(Window::fullscreen+1));
 
-    fonts["big"] = TTF_OpenFont("./assets/font/Oxanium-Regular.ttf", 48);
-    fonts["big bold"] = TTF_OpenFont("./assets/font/Oxanium-Bold.ttf", 48);
-    fonts["default"] = TTF_OpenFont("./assets/font/Oxanium-Regular.ttf", 32);
-    fonts["default bold"] = TTF_OpenFont("./assets/font/Oxanium-Bold.ttf", 32);
-    fonts["small"] = TTF_OpenFont("./assets/font/Oxanium-Regular.ttf", 16);
+    fonts["big"]            = TTF_OpenFont("./assets/font/Oxanium-Regular.ttf"  , 48*(Window::fullscreen+1));
+    fonts["big bold"]       = TTF_OpenFont("./assets/font/Oxanium-Bold.ttf"     , 48*(Window::fullscreen+1));
+    fonts["default"]        = TTF_OpenFont("./assets/font/Oxanium-Regular.ttf"  , 32*(Window::fullscreen+1));
+    fonts["default bold"]   = TTF_OpenFont("./assets/font/Oxanium-Bold.ttf"     , 32*(Window::fullscreen+1));
+    fonts["small"]          = TTF_OpenFont("./assets/font/Oxanium-Regular.ttf"  , 16*(Window::fullscreen+1));
 }
 
 void Manager::clearFonts() {

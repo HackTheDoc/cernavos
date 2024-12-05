@@ -6,6 +6,8 @@ public:
         UNKNOWN,
 
         MAIN,
+
+        OPTIONS
     };
 
     WindowState() {}

@@ -2,7 +2,7 @@
 
 #include "include/Window.h"
 
-const std::string Application::TITLE = "RTS Game";
+const std::string Application::TITLE = "Cernavos";
 bool Application::isRunning = false;
 
 Window Application::window;;
@@ -36,3 +36,7 @@ void Application::run() {
 void Application::kill() {
     window.kill();
 } 
+
+void Application::ReloadWindow() {
+    window.reload();
+}

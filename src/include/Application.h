@@ -19,6 +19,8 @@ public:
     void run();
     void kill();
 
+    static void ReloadWindow();
+
 private:
     static Window window;
 

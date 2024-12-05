@@ -11,9 +11,16 @@ public:
 
         QUIT,
 
+        OPEN_MAIN_MENU,
+
         OPEN_GAME,
+        
         OPEN_OPTIONS,
+        OPEN_GENERAL_SETTINGS,
+        OPEN_CONTROLS_SETTINGS,
+
         OPEN_CREDITS,
+        
     };
 
     SDL_Event e;

@@ -23,12 +23,24 @@ void Event::raise(const Event::ID eid) {
         Application::isRunning = false;
         break;
 
+    case OPEN_MAIN_MENU:
+        w->openMainMenu();
+        break;
+
     case OPEN_GAME:
         std::cout << "opening game..." << std::endl;
         break;
+    
     case OPEN_OPTIONS:
-        std::cout << "opening options..." << std::endl;
+        w->openOptionsMenu();
         break;
+    case OPEN_GENERAL_SETTINGS:
+        w->openOptionsPage(0);
+        break;
+    case OPEN_CONTROLS_SETTINGS:
+        w->openOptionsPage(1);
+        break;
+
     case OPEN_CREDITS:
         std::cout << "opening credits..." << std::endl;
         break;

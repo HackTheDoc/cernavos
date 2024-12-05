@@ -11,6 +11,8 @@ public:
     static Manager* manager;
     static Event event;
 
+    static bool fullscreen;
+
     Window();
     ~Window();
 
@@ -21,6 +23,13 @@ public:
     void kill(); 
 
     void openMainMenu();
+
+    void openOptionsMenu();
+    void openGeneralOptions();
+    void openControlsOptions();
+    void openOptionsPage(const int page);
+    
+    void reload();
 
 private:
     SDL_Window* window; // actual window object
