@@ -28,6 +28,8 @@ public:
     Event();
     ~Event();  
 
+    /// @brief must be executed when initializing the window in order to link the event handler and the window
+    /// @param w pointer to the owning window
     void linkTo(Window* w);
 
     void handleKeyboardInputs();

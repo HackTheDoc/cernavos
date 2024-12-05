@@ -13,7 +13,7 @@ void MainMenu::init() {
     lbl_title = new UILabel(Application::TITLE, "h1", hue::font);
     lbl_title->place(8, 0);
 
-    lbl_version = new UILabel("v0.1", "default", hue::font);
+    lbl_version = new UILabel(Application::VERSION, "default", hue::font);
     lbl_version->place(
         Window::screen.w - lbl_version->width() - 8,
         8

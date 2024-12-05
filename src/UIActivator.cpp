@@ -38,6 +38,7 @@ void UIActivator::update() {
             rect.y + (rect.h - value->height()) / 2
         );
 
+        // sadly i don't think there is a better way than forcing the window reload if we are modifying the fullscreen status of the window
         if (var == &Window::fullscreen)
             Application::ReloadWindow();
 

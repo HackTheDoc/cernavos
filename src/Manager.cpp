@@ -58,6 +58,7 @@ void Manager::reloadFonts() {
 }
 
 /* ----- TEXTURE MANAGER ----- */
+// drawing procedures does not modify the color of the renderer : it always put it back to whatever it previously were
 
 void Manager::Draw(SDL_Texture* text, const SDL_Rect* src, const SDL_Rect* dest, const SDL_RendererFlip flip) {
     if (!text) return;
@@ -80,6 +81,7 @@ void Manager::DrawFilledRect(const SDL_Rect* rect, const SDL_Color& color) {
     SetRenderDrawColor(t);
 }
 
+// centered variable isn't used because this is an early version of the function and i didn't found usefull to use the complete one
 SDL_Texture* Manager::GenerateText(const std::string& text, const std::string& font, const SDL_Color& color, const int length, const bool centered){
     TTF_Font* f = Window::manager->getFont(font);
 

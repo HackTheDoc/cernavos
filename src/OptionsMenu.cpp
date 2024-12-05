@@ -8,6 +8,8 @@ OptionsMenu::OptionsMenu() {}
 OptionsMenu::~OptionsMenu() {}
 
 void OptionsMenu::createGeneralPage() {
+    // create a component adapted to every modifiable parameter
+    
     UIActivator* fa = new UIActivator("Fullscreen:", &Window::fullscreen);
     fa->place(
         (Window::screen.w - fa->width()) / 2,

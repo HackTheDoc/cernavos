@@ -3,6 +3,7 @@
 #include "include/Window.h"
 
 const std::string Application::TITLE = "Cernavos";
+const std::string Application::VERSION = "v0.1";
 bool Application::isRunning = false;
 
 Window Application::window;;

@@ -10,6 +10,7 @@ class Window;
 class Application{
 public:
     static const std::string TITLE;
+    static const std::string VERSION;
     static bool isRunning;
 
     Application();

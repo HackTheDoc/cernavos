@@ -10,6 +10,9 @@ public:
     virtual void update();
     virtual void destroy(); 
 
+    /// @brief in pixels with (0,0) being the top left corner
+    /// @param x 
+    /// @param y 
     void place(const int x, const int y);
 
     int x();

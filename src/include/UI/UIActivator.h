@@ -5,6 +5,9 @@
 
 class UIActivator : public UIElement {
 public:
+    /// @brief 
+    /// @param t display name of the activator 
+    /// @param v pointer to the variable to update
     UIActivator(const std::string& t, bool* v);
     ~UIActivator();
 
@@ -12,6 +15,9 @@ public:
     void update() override;
     void destroy() override;
 
+    /// @brief in pixels with (0,0) being the top left corner
+    /// @param x 
+    /// @param y 
     void place(const int x, const int y);
 
     void reload();
